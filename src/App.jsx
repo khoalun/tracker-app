@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import IssueList from './components/IssueList/IssueList'
 
 function App() {
 
@@ -56,7 +57,7 @@ function App() {
                 />
               </div>
             </div>
-
+                <IssueList />
             <div className="filter-sort-container">
               <div className="list-feature-filter">
                 <span className="feature-label">Filter:</span>
