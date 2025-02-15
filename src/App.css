@@ -1,0 +1,172 @@
+/* Container and Main Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-content {
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* Issue List */
+.issue-list__list {
+  list-style: none;
+  padding: 0;
+}
+
+.issue-list-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* List Item Header */
+.list-item-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.list-item-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.list-item-status {
+  background-color: #6c757d;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* List Item Content */
+.list-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.issue-name {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.list-item-severity {
+  color: #666;
+}
+
+.list-item-group-btn {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.btn--close {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.btn--delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Filter Section */
+.list-feature-filter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.feature-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.group-btn {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-status-btn--all {
+  background-color: #007bff;
+  color: white;
+}
+
+.filter-status-btn--open {
+  background-color: #28a745;
+  color: white;
+}
+
+.filter-status-btn--close {
+  background-color: #17a2b8;
+  color: white;
+}
+
+/* Order By Section */
+.list-feature-sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#sort-value {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Combined Filter and Sort Container */
+.filter-sort-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Search Box */
+.search-box {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 300px;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filter-sort-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .list-item-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .search-box {
+    width: 100%;
+  }
+}
