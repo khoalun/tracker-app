@@ -55,10 +55,11 @@
   .issue-list {
     list-style: none;
     padding: 0;
+
   }
   
   .issue-item {
-    background: white;
+    background: gray;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 15px;

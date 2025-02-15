@@ -3,7 +3,7 @@ import './IssueList.css'
 
 function IssueList({ issues }) {
   return (
-    <div className="issue-list-container">
+    <div className="issue-list-container ">
       <div className="search-filter-section">
         <input 
           type="text" 
@@ -20,9 +20,9 @@ function IssueList({ issues }) {
         </div>
       </div>
 
-      <ul className="issue-list">
+      <ul className="issue-list bg-gray-600">
         {issues.map((issue) => (
-          <li key={issue.id} className="issue-item">
+          <li key={issue.id} className="issue-item ">
             <div className="issue-title">
               <h3>{issue.title}</h3>
               <button className="status-btn">new</button>
