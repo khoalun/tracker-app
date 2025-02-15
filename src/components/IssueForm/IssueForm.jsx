@@ -1,5 +1,4 @@
 import { useReducer } from 'react'
-import PropTypes from 'prop-types'
 import { api } from '../../services/api'
 import { ACTIONS } from '../../store/constants'
 
@@ -41,7 +40,7 @@ function IssueForm({ onAddSuccess }) {
         status: 'Open'
       }
 
-      // Gửi data lên App component
+      // send data to app component
       onAddSuccess(formData)
       
       // Reset form

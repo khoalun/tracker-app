@@ -7,7 +7,7 @@ export const api = {
   getTodos: async () => {
     try {
       const response = await axios.get(BASE_URL);
-      console.log("API Response:", response); // Kiểm tra response
+      console.log("API Response:", response); 
       return response.data;
     } catch (error) {
       console.error("Error fetching todos:", error);
