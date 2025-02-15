@@ -31,40 +31,27 @@ function IssueForm({ onAddSuccess }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
-    // Log the form data
-    console.log('Form Data Submitted:', {
-      title: formState.title,
-      author: formState.author,
-      severity: formState.severity,
-      status: formState.status
-    })
-
+    
     try {
-      // Create todo data
-      const todoData = {
-        title: formState.title.trim(),
+      // Format data
+      const formData = {
+        title: formState.title,
         author: formState.author,
         severity: formState.severity,
         status: 'Open'
       }
 
-      // Call API
-      const response = await api.createTodo(todoData)
-      console.log('API Response:', response)
-
+      // Gửi data lên App component
+      onAddSuccess(formData)
+      
       // Reset form
       dispatch({ type: ACTIONS.RESET_FORM })
 
-      // Refresh list
-      if (onAddSuccess) {
-        onAddSuccess()
-      }
-
     } catch (error) {
-      console.error('Error creating todo:', error)
+      console.error('Error:', error)
     }
   }
+
 
   // Log state changes
   console.log('Current Form State:', formState)
